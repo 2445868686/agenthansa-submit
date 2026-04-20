@@ -5,120 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TestSprite 快速入门指南 - 中文翻译</title>
 <style>
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.7; color: #24292e; }
-h1 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; }
-h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 24px; }
-h3 { margin-top: 20px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.8; color: #24292e; }
+h1 { border-bottom: 2px solid #eaecef; padding-bottom: 0.3em; margin-top: 40px; }
+h2 { border-bottom: 1px solid #eaecef; padding-bottom: 0.3em; margin-top: 30px; }
+h3 { margin-top: 24px; }
 pre { background: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto; }
-code { background: #f6f8fa; padding: 0.2em 0.4em; border-radius: 3px; font-size: 85%; }
+code { background: #f6f8fa; padding: 0.2em 0.4em; border-radius: 3px; font-size: 90%; }
 pre code { background: none; padding: 0; }
 a { color: #0366d6; text-decoration: none; }
 a:hover { text-decoration: underline; }
-blockquote { border-left: 4px solid #dfe2e5; padding: 0 16px; color: #6a737d; margin: 0; }
+blockquote { border-left: 4px solid #dfe2e5; padding: 0 16px; color: #6a737d; margin: 1em 0; }
+ul, ol { padding-left: 2em; }
+li { margin-bottom: 0.3em; }
+hr { border: none; border-top: 1px solid #eaecef; margin: 2em 0; }
 </style>
 </head>
 <body>
-# TestSprite 快速入门指南（中文翻译）
+<h1>TestSprite 快速入门指南（中文翻译）</h1>
 
-> 原文来源：https://docs.testsprite.com/mcp/getting-started/
-> 翻译说明：代码块、变量名和技术术语保持原文不变，仅翻译叙述性内容、UI 标签和错误信息。
+<blockquote><p>原文来源：https://docs.testsprite.com/mcp/getting-started/</p></blockquote>
+<blockquote><p>翻译说明：代码块、变量名和技术术语保持原文不变，仅翻译叙述性内容、UI 标签和错误信息。</p></blockquote>
 
----
+<hr>
 
-## 简介
+<h2>简介</h2>
 
-TestSprite 是目前最简单易用的 AI 软件测试代理，支持全自动化测试。我们的无代码 AI 可以在 **10-20 分钟** 内完成整个测试周期，让你无需手动 QA 工作即可放心发布软件。TestSprite MCP Server 是一个 [Model Context Protocol](https://modelcontextprotocol.io/) 集成，让你的 IDE AI 助手可以直接在编辑器中编排完整的 TestSprite 工作流程。
+<p>TestSprite 是目前最简单易用的 AI 软件测试代理，支持全自动化测试。我们的无代码 AI 可以在 <strong>10-20 分钟</strong> 内完成整个测试周期，让你无需手动 QA 工作即可放心发布软件。TestSprite MCP Server 是一个 <a href="https://modelcontextprotocol.io/">Model Context Protocol</a> 集成，让你的 IDE AI 助手可以直接在编辑器中编排完整的 TestSprite 工作流程。</p>
 
-## 概述
+<h2>概述</h2>
 
-### 什么是 TestSprite MCP Server？
+<h3>什么是 TestSprite MCP Server？</h3>
 
-TestSprite MCP Server 是一个 Model Context Protocol（模型上下文协议）集成，它将你 IDE 中的 AI 助手（如 Cursor 或 Windsurf）与 TestSprite 的智能测试引擎连接起来。它支持在你的开发环境中直接运行**完全自动化的测试工作流程**。
+<p>TestSprite MCP Server 是一个 Model Context Protocol（模型上下文协议）集成，它将你 IDE 中的 AI 助手（如 Cursor 或 Windsurf）与 TestSprite 的智能测试引擎连接起来。它支持在你的开发环境中直接运行<strong>完全自动化的测试工作流程</strong>。</p>
 
-### 工作原理
+<h3>工作原理</h3>
 
-安装 TestSprite MCP 后，你可以使用简单的**自然语言提示词**来让 AI 测试代理为你处理整个测试工作流程。
+<p>安装 TestSprite MCP 后，你可以使用简单的<strong>自然语言提示词</strong>来让 AI 测试代理为你处理整个测试工作流程。</p>
 
-只需使用以下提示词，将项目文件夹拖入聊天框，或者描述你的测试需求。TestSprite MCP Server 会处理剩余的一切：
+<p>只需使用以下提示词，将项目文件夹拖入聊天框，或者描述你的测试需求。TestSprite MCP Server 会处理剩余的一切：</p>
 
-```
+<pre><code class="language-">
 Help me test this project with TestSprite.
-```
+</code></pre>
 
-TestSprite 遵循系统化的 8 步流程，将你的代码转化为经过全面测试的软件：
+<p>TestSprite 遵循系统化的 8 步流程，将你的代码转化为经过全面测试的软件：</p>
 
-1. **启动测试环境** — 自动检测并配置本地运行环境
-2. **读取用户 PRD** — 分析产品需求文档，理解软件应该做什么
-3. **代码分析与摘要** — 扫描代码库，提取关键功能和架构信息
-4. **生成标准化 PRD** — 基于代码分析创建 TestSprite 标准化需求文档
-5. **创建测试计划** — 为前端和后端生成全面的测试计划
-6. **生成可执行测试代码** — 自动编写可在云端运行的测试脚本
-7. **执行测试** — 在云端运行所有测试用例
-8. **分析结果与报告** — 生成详细的测试报告，标识问题
-9. **AI 自动修复问题** — 对发现的 bug 提供自动修复建议
+<ol>
+<li><strong>启动测试环境</strong> — 自动检测并配置本地运行环境</li>
+<li><strong>读取用户 PRD</strong> — 分析产品需求文档，理解软件应该做什么</li>
+<li><strong>代码分析与摘要</strong> — 扫描代码库，提取关键功能和架构信息</li>
+<li><strong>生成标准化 PRD</strong> — 基于代码分析创建 TestSprite 标准化需求文档</li>
+<li><strong>创建测试计划</strong> — 为前端和后端生成全面的测试计划</li>
+<li><strong>生成可执行测试代码</strong> — 自动编写可在云端运行的测试脚本</li>
+<li><strong>执行测试</strong> — 在云端运行所有测试用例</li>
+<li><strong>分析结果与报告</strong> — 生成详细的测试报告，标识问题</li>
+<li><strong>AI 自动修复问题</strong> — 对发现的 bug 提供自动修复建议</li>
+</ol>
 
-### 核心优势
+<h3>核心优势</h3>
 
-根据不同角色，TestSprite MCP Server 提供不同的优势：
+<p>根据不同角色，TestSprite MCP Server 提供不同的优势：</p>
 
-**对开发者而言：** 无需编写测试即可更快发布，获得**分钟级**（而非小时级）的反馈，并通过 AI 驱动的分析**自动修复问题**——全程**无需离开 IDE**。
+<p><strong>对开发者而言：</strong> 无需编写测试即可更快发布，获得<strong>分钟级</strong>（而非小时级）的反馈，并通过 AI 驱动的分析<strong>自动修复问题</strong>——全程<strong>无需离开 IDE</strong>。</p>
 
-**对团队而言：** 通过**广泛且一致的覆盖**（包括边界用例）实现**可预测的质量**和**更快的发布节奏**，同时减少手动 QA 工作和测试维护开销。
+<p><strong>对团队而言：</strong> 通过<strong>广泛且一致的覆盖</strong>（包括边界用例）实现<strong>可预测的质量</strong>和<strong>更快的发布节奏</strong>，同时减少手动 QA 工作和测试维护开销。</p>
 
-### 独特之处
+<h3>独特之处</h3>
 
-TestSprite 区别于其他测试工具的关键特性：
+<p>TestSprite 区别于其他测试工具的关键特性：</p>
 
-- **无代码、无提示词** — 不需要编写测试代码，也不需要复杂的提示词工程
-- **全自动端到端** — 从代码分析到测试执行再到 bug 修复，全部自动化
-- **IDE 原生集成** — 在你熟悉的开发环境中直接工作
-- **前后端全覆盖** — 同时测试前端 UI 和后端 API
-- **自动 bug 修复** — 不仅发现问题，还能提供修复方案
+<ul>
+<li><strong>无代码、无提示词</strong> — 不需要编写测试代码，也不需要复杂的提示词工程</li>
+<li><strong>全自动端到端</strong> — 从代码分析到测试执行再到 bug 修复，全部自动化</li>
+<li><strong>IDE 原生集成</strong> — 在你熟悉的开发环境中直接工作</li>
+<li><strong>前后端全覆盖</strong> — 同时测试前端 UI 和后端 API</li>
+<li><strong>自动 bug 修复</strong> — 不仅发现问题，还能提供修复方案</li>
+</ol>
 
-### 支持的技术
+<h3>支持的技术</h3>
 
-TestSprite 支持广泛的技术栈，包括但不限于：
+<p>TestSprite 支持广泛的技术栈，包括但不限于：</p>
 
-- **前端：** React、Vue、Angular、Next.js、Nuxt 等
-- **后端：** Node.js、Python、Java、Go 等
-- **数据库：** PostgreSQL、MySQL、MongoDB 等
-- **云服务：** AWS、GCP、Azure 等
+<ul>
+<li><strong>前端：</strong> React、Vue、Angular、Next.js、Nuxt 等</li>
+<li><strong>后端：</strong> Node.js、Python、Java、Go 等</li>
+<li><strong>数据库：</strong> PostgreSQL、MySQL、MongoDB 等</li>
+<li><strong>云服务：</strong> AWS、GCP、Azure 等</li>
+</ol>
 
----
+<hr>
 
-## 安装
+<h2>安装</h2>
 
-在 2 分钟内将 TestSprite MCP Server 安装到你的 IDE 中。
+<p>在 2 分钟内将 TestSprite MCP Server 安装到你的 IDE 中。</p>
 
-### 前置条件
+<h3>前置条件</h3>
 
-在安装 TestSprite MCP Server 之前，请确保满足以下条件：
+<p>在安装 TestSprite MCP Server 之前，请确保满足以下条件：</p>
 
-- **兼容的 IDE：** Cursor、Windsurf、Trae、VS Code（带 MCP 扩展）、Claude Code 等
-- **TestSprite 账号 —** [免费注册](https://www.testsprite.com/auth/cognito/sign-up)
-- **Node.js >= 22 —** [下载 Node.js](https://nodejs.org/)（运行 MCP server 所需）
+<ul>
+<li><strong>兼容的 IDE：</strong> Cursor、Windsurf、Trae、VS Code（带 MCP 扩展）、Claude Code 等</li>
+<li><strong>TestSprite 账号 —</strong> <a href="https://www.testsprite.com/auth/cognito/sign-up">免费注册</a></li>
+<li><strong>Node.js >= 22 —</strong> <a href="https://nodejs.org/">下载 Node.js</a>（运行 MCP server 所需）</li>
+</ol>
 
-### 获取 API Key
+<h3>获取 API Key</h3>
 
-首先，你需要一个 TestSprite API Key：
+<p>首先，你需要一个 TestSprite API Key：</p>
 
-1. 登录你的 [TestSprite 控制台](https://www.testsprite.com/dashboard)
-2. 导航到 Settings 下的 **API Keys**
-3. 点击 **"New API Key"**
-4. **复制**你的 API Key（安装时需要用到）
+<ol>
+<li>登录你的 <a href="https://www.testsprite.com/dashboard">TestSprite 控制台</a></li>
+<li>导航到 Settings 下的 <strong>API Keys</strong></li>
+<li>点击 <strong>"New API Key"</strong></li>
+<li><strong>复制</strong>你的 API Key（安装时需要用到）</li>
+</ol>
 
-### 安装步骤
+<h3>安装步骤</h3>
 
-根据你使用的 IDE 选择对应的安装方式：
+<p>根据你使用的 IDE 选择对应的安装方式：</p>
 
-#### Cursor
+<p>#### Cursor</p>
 
-1. 获取你的 API Key
-2. 在 Cursor 中，打开 Settings → MCP
-3. 点击 "Add new global MCP server"
-4. 添加 TestSprite MCP server 配置：
+<ol>
+<li>获取你的 API Key</li>
+<li>在 Cursor 中，打开 Settings → MCP</li>
+<li>点击 "Add new global MCP server"</li>
+<li>添加 TestSprite MCP server 配置：</li>
+</ol>
 
-```json
+<pre><code class="language-json">
 {
   "mcpServers": {
     "TestSprite": {
@@ -130,92 +145,106 @@ TestSprite 支持广泛的技术栈，包括但不限于：
     }
   }
 }
-```
+</code></pre>
 
-5. 保存配置，等待 MCP server 启动
-6. 在 MCP 设置页面确认 TestSprite 显示为绿色（已连接）
+<ol>
+<li>保存配置，等待 MCP server 启动</li>
+<li>在 MCP 设置页面确认 TestSprite 显示为绿色（已连接）</li>
+</ol>
 
-#### VS Code
+<p>#### VS Code</p>
 
-1. 获取你的 API Key
-2. 在 VS Code 中安装 MCP 扩展
-3. 在设置中添加 MCP server 配置
-4. 将上述 JSON 配置粘贴到 `settings.json` 中
-5. 重启 VS Code
+<ol>
+<li>获取你的 API Key</li>
+<li>在 VS Code 中安装 MCP 扩展</li>
+<li>在设置中添加 MCP server 配置</li>
+<li>将上述 JSON 配置粘贴到 `settings.json` 中</li>
+<li>重启 VS Code</li>
+</ol>
 
-#### Claude Code
+<p>#### Claude Code</p>
 
-1. 获取你的 API Key
-2. 在 Claude Code 中添加 MCP server：
+<ol>
+<li>获取你的 API Key</li>
+<li>在 Claude Code 中添加 MCP server：</li>
+</ol>
 
-```bash
+<pre><code class="language-bash">
 claude mcp add TestSprite -s user -- npx -y @testsprite/testsprite-mcp@latest
-```
+</code></pre>
 
-3. 设置环境变量：
+<ol>
+<li>设置环境变量：</li>
+</ol>
 
-```bash
+<pre><code class="language-bash">
 claude mcp update TestSprite -e API_KEY=你的API_KEY
-```
+</code></pre>
 
-#### 其他 IDE
+<p>#### 其他 IDE</p>
 
-对于其他支持 MCP 的 IDE，使用通用配置：
+<p>对于其他支持 MCP 的 IDE，使用通用配置：</p>
 
-- **命令：** `npx`
-- **参数：** `-y @testsprite/testsprite-mcp@latest`
-- **环境变量：** `API_KEY=你的API_KEY`
+<ul>
+<li><strong>命令：</strong> <code>npx</code></li>
+<li><strong>参数：</strong> <code>-y @testsprite/testsprite-mcp@latest</code></li>
+<li><strong>环境变量：</strong> <code>API_KEY=你的API_KEY</code></li>
+</ol>
 
-### 安装验证
+<h3>安装验证</h3>
 
-安装成功后，你应该看到以下指示：
+<p>安装成功后，你应该看到以下指示：</p>
 
-- MCP server 状态显示为绿色/已连接
-- IDE 聊天中可以访问 TestSprite 相关工具
-- 没有错误消息
+<ul>
+<li>MCP server 状态显示为绿色/已连接</li>
+<li>IDE 聊天中可以访问 TestSprite 相关工具</li>
+<li>没有错误消息</li>
+</ol>
 
-### 快速测试
+<h3>快速测试</h3>
 
-在你的 IDE 聊天中输入：
+<p>在你的 IDE 聊天中输入：</p>
 
-```
+<pre><code class="language-">
 Help me test this project with TestSprite.
-```
+</code></pre>
 
-如果 TestSprite 响应并开始分析你的项目，说明安装成功。
+<p>如果 TestSprite 响应并开始分析你的项目，说明安装成功。</p>
 
-### 卸载
+<h3>卸载</h3>
 
-如果需要卸载 TestSprite MCP Server：
+<p>如果需要卸载 TestSprite MCP Server：</p>
 
-1. 从 IDE 的 MCP 设置中移除 TestSprite 配置
-2. 重启 IDE
+<ol>
+<li>从 IDE 的 MCP 设置中移除 TestSprite 配置</li>
+<li>重启 IDE</li>
+</ol>
 
----
+<hr>
 
-## 第一个 MCP 测试
+<h2>第一个 MCP 测试</h2>
 
-在 10 分钟内运行你的第一个自动化测试。
+<p>在 10 分钟内运行你的第一个自动化测试。</p>
 
-在本指南结束时，你将运行你的第一个**自动化测试套件**，看到 AI 生成全面的测试计划，观看测试在云端执行，收到详细的测试报告，并应用**自动 bug 修复**。
+<p>在本指南结束时，你将运行你的第一个<strong>自动化测试套件</strong>，看到 AI 生成全面的测试计划，观看测试在云端执行，收到详细的测试报告，并应用<strong>自动 bug 修复</strong>。</p>
 
-在开始之前，请确保你已经 [安装了 TestSprite MCP Server](https://docs.testsprite.com/mcp/getting-started/installation) 并且 **IDE 已打开**。
+<p>在开始之前，请确保你已经 <a href="https://docs.testsprite.com/mcp/getting-started/installation">安装了 TestSprite MCP Server</a> 并且 <strong>IDE 已打开</strong>。</p>
 
-### 第 1 步：准备你的项目
+<h3>第 1 步：准备你的项目</h3>
 
-**启动你的应用程序** — 确保你的应用程序在本地运行：
+<p><strong>启动你的应用程序</strong> — 确保你的应用程序在本地运行：</p>
 
-```bash
+<pre><code class="language-bash">
 # 前端应用示例
 npm run dev  # 通常运行在端口 3000、5173 或 8080
 
 # 后端应用示例
 node index.js  # 通常运行在端口 8000、3001 或 4000
-```
+</code></pre>
 
-**项目结构示例：**
+<p><strong>项目结构示例：</strong></p>
 
-```
+<pre><code class="language-">
 my-project/
 ├── frontend/          # React、Vue、Angular 等
 │   ├── src/
@@ -227,68 +256,80 @@ my-project/
 │   └── ...
 ├── README.md
 └── package.json
-```
+</code></pre>
 
-### 第 2 步：魔法命令
+<h3>第 2 步：魔法命令</h3>
 
-打开 **IDE 聊天窗口**，按以下步骤操作：
+<p>打开 <strong>IDE 聊天窗口</strong>，按以下步骤操作：</p>
 
-1. **打开**一个新聊天窗口
-2. **输入**魔法命令：
+<ol>
+<li><strong>打开</strong>一个新聊天窗口</li>
+<li><strong>输入</strong>魔法命令：</li>
+</ol>
 
-```
+<pre><code class="language-">
 Can you test this project with TestSprite?
-```
+</code></pre>
 
-3. 如果需要测试特定子项目，将项目文件夹拖拽到聊天窗口中
-4. 按 ⇧ Enter
+<ol>
+<li>如果需要测试特定子项目，将项目文件夹拖拽到聊天窗口中</li>
+<li>按 ⇧ Enter</li>
+</ol>
 
-就这样！你的 AI 助手将接管并引导你完成整个测试流程。
+<p>就这样！你的 AI 助手将接管并引导你完成整个测试流程。</p>
 
-### 第 3 步：配置（必填）
+<h3>第 3 步：配置（必填）</h3>
 
-TestSprite 会引导你完成必要的配置：
+<p>TestSprite 会引导你完成必要的配置：</p>
 
-1. **确认项目路径** — AI 助手会检测你的项目结构，确认路径是否正确
-2. **配置应用 URL** — 提供你的前端和后端的本地运行地址
-3. **确认技术栈** — TestSprite 会自动检测，你只需确认
+<ol>
+<li><strong>确认项目路径</strong> — AI 助手会检测你的项目结构，确认路径是否正确</li>
+<li><strong>配置应用 URL</strong> — 提供你的前端和后端的本地运行地址</li>
+<li><strong>确认技术栈</strong> — TestSprite 会自动检测，你只需确认</li>
+</ol>
 
-### 第 4 步：自动化工作流程
+<h3>第 4 步：自动化工作流程</h3>
 
-配置完成后，TestSprite 将自动执行以下步骤：
+<p>配置完成后，TestSprite 将自动执行以下步骤：</p>
 
-1. 分析你的代码库结构
-2. 读取 PRD 或 README 文档
-3. 生成标准化的产品需求
-4. 创建前端和后端测试计划
-5. 生成可执行的测试代码
-6. 在云端执行测试
+<ol>
+<li>分析你的代码库结构</li>
+<li>读取 PRD 或 README 文档</li>
+<li>生成标准化的产品需求</li>
+<li>创建前端和后端测试计划</li>
+<li>生成可执行的测试代码</li>
+<li>在云端执行测试</li>
+</ol>
 
-整个过程通常需要 **10-20 分钟**，具体取决于项目大小。
+<p>整个过程通常需要 <strong>10-20 分钟</strong>，具体取决于项目大小。</p>
 
-### 第 5 步：查看测试结果
+<h3>第 5 步：查看测试结果</h3>
 
-测试完成后，你将收到：
+<p>测试完成后，你将收到：</p>
 
-- **测试摘要** — 通过/失败/跳过的测试数量
-- **详细报告** — 每个测试用例的执行结果
-- **问题列表** — 发现的 bug 和潜在问题
-- **覆盖分析** — 测试覆盖了哪些功能模块
+<ul>
+<li><strong>测试摘要</strong> — 通过/失败/跳过的测试数量</li>
+<li><strong>详细报告</strong> — 每个测试用例的执行结果</li>
+<li><strong>问题列表</strong> — 发现的 bug 和潜在问题</li>
+<li><strong>覆盖分析</strong> — 测试覆盖了哪些功能模块</li>
+</ol>
 
-### 第 6 步：自动 Bug 修复
+<h3>第 6 步：自动 Bug 修复</h3>
 
-对于发现的问题，TestSprite 会提供：
+<p>对于发现的问题，TestSprite 会提供：</p>
 
-- **问题描述** — 什么出了问题
-- **根因分析** — 为什么会出现这个问题
-- **修复建议** — 具体的代码修改方案
-- **自动修复** — 一键应用修复（可选）
+<ul>
+<li><strong>问题描述</strong> — 什么出了问题</li>
+<li><strong>根因分析</strong> — 为什么会出现这个问题</li>
+<li><strong>修复建议</strong> — 具体的代码修改方案</li>
+<li><strong>自动修复</strong> — 一键应用修复（可选）</li>
+</ol>
 
-### 输出示例
+<h3>输出示例</h3>
 
-测试完成后，你会在 IDE 中看到类似以下的报告：
+<p>测试完成后，你会在 IDE 中看到类似以下的报告：</p>
 
-```
+<pre><code class="language-">
 测试结果摘要
 ├── 总测试用例: 45
 ├── 通过: 38
@@ -302,33 +343,39 @@ TestSprite 会引导你完成必要的配置：
 3. [后端] /api/users - 返回 500 错误
 4. [后端] /api/orders - 缺少必填字段验证
 5. [集成] 支付流程 - 超时未处理
-```
+</code></pre>
 
-### 成功技巧
+<h3>成功技巧</h3>
 
-- **确保应用正在运行** — TestSprite 需要访问本地运行的应用
-- **提供准确的端口信息** — 帮助 TestSprite 正确定位服务
-- **保持项目结构清晰** — 标准的项目结构有助于更准确的分析
-- **阅读 README** — 良好的文档能帮助 AI 理解项目需求
-- **先修复阻塞性问题** — 优先处理阻止应用启动的问题
+<ul>
+<li><strong>确保应用正在运行</strong> — TestSprite 需要访问本地运行的应用</li>
+<li><strong>提供准确的端口信息</strong> — 帮助 TestSprite 正确定位服务</li>
+<li><strong>保持项目结构清晰</strong> — 标准的项目结构有助于更准确的分析</li>
+<li><strong>阅读 README</strong> — 良好的文档能帮助 AI 理解项目需求</li>
+<li><strong>先修复阻塞性问题</strong> — 优先处理阻止应用启动的问题</li>
+</ol>
 
-### 下一步
+<h3>下一步</h3>
 
-- [为新功能创建测试](https://docs.testsprite.com/mcp/core/create-tests-new-feature) — 为代码变更生成增量测试
-- [添加额外测试](https://docs.testsprite.com/mcp/core/add-extra-tests) — 扩展测试覆盖范围
-- [测试进度仪表板](https://docs.testsprite.com/mcp/core/test-progress-dashboard) — 跟踪测试执行状态
-- [部署 MCP 测试](https://docs.testsprite.com/mcp/core/deploy-to-production) — 将测试集成到 CI/CD 流程
-- [GitHub 集成](https://docs.testsprite.com/mcp/integrations/github-integration) — 与 GitHub Actions 集成
+<ul>
+<li><a href="https://docs.testsprite.com/mcp/core/create-tests-new-feature">为新功能创建测试</a> — 为代码变更生成增量测试</li>
+<li><a href="https://docs.testsprite.com/mcp/core/add-extra-tests">添加额外测试</a> — 扩展测试覆盖范围</li>
+<li><a href="https://docs.testsprite.com/mcp/core/test-progress-dashboard">测试进度仪表板</a> — 跟踪测试执行状态</li>
+<li><a href="https://docs.testsprite.com/mcp/core/deploy-to-production">部署 MCP 测试</a> — 将测试集成到 CI/CD 流程</li>
+<li><a href="https://docs.testsprite.com/mcp/integrations/github-integration">GitHub 集成</a> — 与 GitHub Actions 集成</li>
+</ol>
 
----
+<hr>
 
-## 翻译信息
+<h2>翻译信息</h2>
 
-- **翻译日期：** 2026-04-20
-- **原文版本：** TestSprite Documentation v1.0
-- **原文 URL：** https://docs.testsprite.com/mcp/getting-started/
-- **翻译语言：** 简体中文
-- **翻译范围：** Getting Started 章节（Introduction、Overview、Installation、First MCP Test）
+<ul>
+<li><strong>翻译日期：</strong> 2026-04-20</li>
+<li><strong>原文版本：</strong> TestSprite Documentation v1.0</li>
+<li><strong>原文 URL：</strong> https://docs.testsprite.com/mcp/getting-started/</li>
+<li><strong>翻译语言：</strong> 简体中文</li>
+<li><strong>翻译范围：</strong> Getting Started 章节（Introduction、Overview、Installation、First MCP Test）</li>
+</ol>
 
 </body>
 </html>
