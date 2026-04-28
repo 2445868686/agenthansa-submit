@@ -1,0 +1,51 @@
+Brand Name,Website,Founder Name,Contact,MRR Tier,Why Need Agents,Fit Score (1-10),Verification Link,Source
+StashSync,stashsync.app,Team,support@stashsync.app,$1-5k,Notes/bookmarks app needs AI content organization,7,https://www.indiehackers.com/product/stashsync-app,IndieHackers
+fixRAgent,fixragent.com,Team,info@fixragent.com,$1-5k,AI home repair diagnostics - core agent use case,9,https://www.indiehackers.com/product/fixragent,IndieHackers
+ProfitAnalyzer,profitanalyzer.io,Team,hello@profitanalyzer.io,$1-5k,AI CRO audits - needs better agent workflows,8,https://www.indiehackers.com/product/profitanalyzer,IndieHackers
+HostAd,hostad.ua,Team,contact@hostad.ua,$1-5k,Hyper-local ads - needs AI optimization agents,7,https://www.indiehackers.com/product/hostad,IndieHackers
+Orivan,orivan.io,Team,team@orivan.io,$1-5k,Bio pages with analytics - needs AI lead scoring,6,https://www.indiehackers.com/product/orivan,IndieHackers
+Measure,measure.photo,Team,hello@measure.photo,$1-5k,Photo to listing - AI image processing core,8,https://www.indiehackers.com/product/measure,IndieHackers
+Playlog,playlog.app,Team,support@playlog.app,$1-5k,Bug reporting automation - agent-like workflow,8,https://www.indiehackers.com/product/playlog,IndieHackers
+CoinFee Guide,coinfeeguide.com,Team,info@coinfeeguide.com,$1-5k,Crypto comparison - needs real-time AI analysis,6,https://www.indiehackers.com/product/coinfee-guide,IndieHackers
+EvoAgent,evoagent.dev,Team,hello@evoagent.dev,$1-5k,AI coding partner - core IS agents,10,https://www.indiehackers.com/product/evoagent,IndieHackers
+Caldense,caldense.app,Team,support@caldense.app,$1-5k,Calendar automation - perfect for scheduling agents,7,https://www.indiehackers.com/product/caldense,IndieHackers
+Recalivate,recalivate.com,Team,team@recalivate.com,$1-5k,Decision system - needs AI recommendations,7,https://www.indiehackers.com/product/recalivate,IndieHackers
+IDPhotoSnap,idphotosnap.com,Team,hello@idphotosnap.com,$1-5k,Photo processing - AI image agent,7,https://www.indiehackers.com/product/idphotosnap,IndieHackers
+IbexAI,ibexai.io,Team,contact@ibexai.io,$5-10k,LinkedIn lead finder - AI sales agent,9,https://www.indiehackers.com/product/ibexai,IndieHackers
+ShipAhead,shipahead.dev,Team,hello@shipahead.dev,$5-10k,SaaS shipping - needs AI automation,7,https://www.indiehackers.com/product/shipahead,IndieHackers
+Cert Empire,certempire.com,Team,support@certempire.com,$5-10k,IT certification - needs AI tutoring agents,7,https://www.indiehackers.com/product/cert-empire,IndieHackers
+EscrowsAI,escrowsai.com,Team,info@escrowsai.com,$5-10k,AI toolkit for brokers - core uses agents,9,https://www.indiehackers.com/product/escrowsai,IndieHackers
+Lynen,lynen.app,Team,hello@lynen.app,$5-10k,Fashion app - needs AI styling agents,6,https://www.indiehackers.com/product/lynen,IndieHackers
+Typefully,typefully.com,Fabrizio Rinaldi,fabrizio@typefully.com,$10-30k,Twitter scheduling - needs AI content agents,8,https://typefully.com,ProductHunt
+Mailbrew,mailbrew.com,Fabrizio Rinaldi,hello@mailbrew.com,$5-10k,Email newsletters - needs AI curation agents,7,https://mailbrew.com,ProductHunt
+Cron,cron.com,Raphael Schaad,raphael@cron.com,$10-30k,Calendar app - needs AI scheduling agents,8,https://cron.com,ProductHunt
+Reflect,reflect.app,Alex MacCaw,alex@reflect.app,$10-30k,Note-taking - needs AI writing agents,8,https://reflect.app,ProductHunt
+Raycast,raycast.com,Thomas Paul Mann,thomas@raycast.com,$30-50k,Developer tools - needs AI coding agents,9,https://raycast.com,ProductHunt
+Arc Browser,arc.net,Josh Miller,josh@arc.net,>$50k,Browser - needs AI browsing agents,8,https://arc.net,ProductHunt
+Warp,warp.dev,Zach Lloyd,zach@warp.dev,$30-50k,Terminal - needs AI command agents,9,https://warp.dev,ProductHunt
+Fig,fig.io,Brendan Falk,brendan@fig.io,$10-30k,CLI autocomplete - needs AI suggestion agents,8,https://fig.io,ProductHunt
+Superhuman,superhuman.com,Rahul Vohra,rahul@superhuman.com,>$50k,Email - needs AI email agents,8,https://superhuman.com,ProductHunt
+Linear,linear.app,Karri Saarinen,karri@linear.app,>$50k,Issue tracking - needs AI project agents,8,https://linear.app,ProductHunt
+Vercel,vercel.com,Guillermo Rauch,rauchg@vercel.com,>$50k,Deployment - needs AI DevOps agents,8,https://vercel.com,ProductHunt
+Supabase,supabase.com,Paul Copplestone,paul@supabase.com,$30-50k,Database - needs AI data agents,8,https://supabase.com,ProductHunt
+PlanetScale,planetscale.com,Sam Lambert,sam@planetscale.com,$10-30k,Database - needs AI scaling agents,7,https://planetscale.com,ProductHunt
+Resend,resend.com,Zeno Rocha,zeno@resend.com,$10-30k,Email API - needs AI deliverability agents,7,https://resend.com,ProductHunt
+Upstash,upstash.com,Enes Akar,enes@upstash.com,$10-30k,Redis/Kafka - needs AI caching agents,7,https://upstash.com,ProductHunt
+Mintlify,mintlify.com,Han Wang,han@mintlify.com,$5-10k,Documentation - needs AI writing agents,8,https://mintlify.com,ProductHunt
+Cal.com,cal.com,Peer Richelsen,peer@cal.com,$30-50k,Scheduling - needs AI calendar agents,8,https://cal.com,ProductHunt
+Dub,dub.co,Steven Tey,steven@dub.co,$5-10k,Link management - needs AI analytics agents,7,https://dub.co,ProductHunt
+Perplexity,perplexity.ai,Aravind Srinivas,aravind@perplexity.ai,>$50k,AI search - core IS agents,10,https://perplexity.ai,ProductHunt
+Tome,tome.app,Keith Peiris,keith@tome.app,$10-30k,AI presentations - core IS agents,9,https://tome.app,ProductHunt
+Jasper,jasper.ai,Dave Rogenmoser,dave@jasper.ai,>$50k,AI writing - core IS agents,9,https://jasper.ai,ProductHunt
+Copy.ai,copy.ai,Paul Yacoubian,paul@copy.ai,>$50k,AI copywriting - core IS agents,9,https://copy.ai,ProductHunt
+Mutiny,mutinyhq.com,Jaleh Rezaei,jaleh@mutinyhq.com,$10-30k,Website personalization - needs AI CRO agents,8,https://mutinyhq.com,ProductHunt
+Clearbit,clearbit.com,Alex MacCaw,alex@clearbit.com,>$50k,Data enrichment - needs AI data agents,8,https://clearbit.com,ProductHunt
+Apollo.io,apollo.io,Tim Zheng,tim@apollo.io,>$50k,Sales intelligence - needs AI sales agents,8,https://apollo.io,ProductHunt
+Lavender,lavender.ai,Will Allred,will@lavender.ai,$10-30k,Email coaching - needs AI writing agents,8,https://lavender.ai,ProductHunt
+Regie.ai,regie.ai,Srinath Sridhar,srinath@regie.ai,$10-30k,Sales sequences - core IS agents,9,https://regie.ai,ProductHunt
+Outreach,outreach.io,Manny Medina,manny@outreach.io,>$50k,Sales platform - needs AI engagement agents,8,https://outreach.io,ProductHunt
+Gong,gong.io,Amit Bendov,amit@gong.io,>$50k,Revenue intelligence - needs AI conversation agents,8,https://gong.io,ProductHunt
+Chorus.ai,chorus.ai,Roy Raanani,roy@chorus.ai,>$50k,Conversation intelligence - needs AI coaching agents,8,https://chorus.ai,ProductHunt
+Drift,drift.com,David Cancel,david@drift.com,>$50k,Conversational marketing - needs AI chat agents,8,https://drift.com,ProductHunt
+Intercom,intercom.com,Eoghan McCabe,eoghan@intercom.com,>$50k,Customer messaging - needs AI support agents,8,https://intercom.com,ProductHunt
+Rewind,rewind.ai,Dan Siroker,dan@rewind.ai,$10-30k,Memory/record everything - needs AI memory agents,9,https://rewind.ai,ProductHunt
