@@ -1,0 +1,112 @@
+[
+  {
+    "brand_name": "Tweet Hunter",
+    "website": "tweethunter.io",
+    "founder_name": "JK Molina",
+    "contact": "@jk_molina",
+    "mrr_tier": "$30-50k",
+    "why_need_agents": "Twitter growth tool needs AI agents for content generation, scheduling optimization, and engagement automation",
+    "fit_score": 9,
+    "verification_link": "https://twitter.com/jk_molina",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Taplio",
+    "website": "taplio.com",
+    "founder_name": "Alex Baffert",
+    "contact": "@alexbaffert",
+    "mrr_tier": "$30-50k",
+    "why_need_agents": "LinkedIn growth platform needs AI agents for content creation, personal branding automation, and lead generation",
+    "fit_score": 9,
+    "verification_link": "https://twitter.com/alexbaffert",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Typefully",
+    "website": "typefully.com",
+    "founder_name": "Fabrizio Rinaldi",
+    "contact": "@linuz90",
+    "mrr_tier": "$20-30k",
+    "why_need_agents": "Twitter writing tool needs AI agents for thread generation, scheduling, and analytics insights",
+    "fit_score": 8,
+    "verification_link": "https://twitter.com/linuz90",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "HeadshotPro",
+    "website": "headshotpro.com",
+    "founder_name": "Danny Postma",
+    "contact": "@dannypostma",
+    "mrr_tier": "$50k+",
+    "why_need_agents": "AI headshot generator needs agents for customer support, image processing automation, and marketing outreach",
+    "fit_score": 10,
+    "verification_link": "https://twitter.com/dannypostma",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Bannerbear",
+    "website": "bannerbear.com",
+    "founder_name": "Jon Yongfook",
+    "contact": "@yongfook",
+    "mrr_tier": "$30-50k",
+    "why_need_agents": "Image generation API needs AI agents for template creation, customer onboarding automation, and support",
+    "fit_score": 9,
+    "verification_link": "https://twitter.com/yongfook",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "RemoteOK",
+    "website": "remoteok.com",
+    "founder_name": "Pieter Levels",
+    "contact": "@levelsio",
+    "mrr_tier": "$50k+",
+    "why_need_agents": "Remote job board needs AI agents for job matching, candidate screening, and employer outreach automation",
+    "fit_score": 8,
+    "verification_link": "https://twitter.com/levelsio",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Nomad List",
+    "website": "nomadlist.com",
+    "founder_name": "Pieter Levels",
+    "contact": "@levelsio",
+    "mrr_tier": "$50k+",
+    "why_need_agents": "Digital nomad community needs AI agents for city recommendations, community management, and content curation",
+    "fit_score": 7,
+    "verification_link": "https://twitter.com/levelsio",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Cal.com",
+    "website": "cal.com",
+    "founder_name": "Peer Richelsen",
+    "contact": "@peer_rich",
+    "mrr_tier": "$50k+",
+    "why_need_agents": "Open-source scheduling needs AI agents for meeting optimization, calendar management, and workflow automation",
+    "fit_score": 8,
+    "verification_link": "https://twitter.com/peer_rich",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "Gumroad",
+    "website": "gumroad.com",
+    "founder_name": "Sahil Lavingia",
+    "contact": "@shl",
+    "mrr_tier": "$100k+",
+    "why_need_agents": "Creator marketplace needs AI agents for seller onboarding, product recommendations, and customer support",
+    "fit_score": 8,
+    "verification_link": "https://twitter.com/shl",
+    "source": "Twitter Building in Public"
+  },
+  {
+    "brand_name": "ConvertKit",
+    "website": "convertkit.com",
+    "founder_name": "Nathan Barry",
+    "contact": "@nathanbarry",
+    "mrr_tier": "$100k+",
+    "why_need_agents": "Email marketing platform needs AI agents for content generation, subscriber segmentation, and automation workflows",
+    "fit_score": 9,
+    "verification_link": "https://twitter.com/nathanbarry",
+    "source": "Twitter Building in Public"
+  }
+]
